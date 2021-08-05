@@ -133,15 +133,80 @@ let arregloPalabras = ["p1",'p2','p3','p4']
 // }
 // arregloPalabras.forEach(callback)
 arregloPalabras.forEach(function (item){
-  console.log(item)
+  // console.log(item)
 })
 
 // map
-// reduce
 // filter
 // shift
 // unshift
 // pop
 // push
+
+
+// reduce
 // fill
 // sort
+
+let nuevoArreglo = [1,2,3,4,5,6,7,8]
+
+let reducido = nuevoArreglo.reduce(function (prev, curr){
+  return prev + curr
+},0)
+
+// console.log(reducido)
+
+let objReducido = nuevoArreglo.reduce(function (prev, curr){
+  let suma = prev.suma + curr
+  return { suma }
+},{suma: 0})
+
+// console.log(objReducido);
+
+let arrayParaFill = new Array(3)
+arrayParaFill.fill(7)
+
+// console.log(arrayParaFill)
+// console.log(nuevoArreglo.fill(7));
+// console.log(nuevoArreglo.fill(0,6,7));
+
+
+let nuevoArreglo2 = [3,1,6,9,2,4,5,10]
+let ordenado = nuevoArreglo2.sort(function(a,b){
+    return a-b
+})
+var items = [
+  { name: 'Edward', value: 21 },
+  { name: 'Sharpe', value: 37 },
+  { name: 'And', value: 45 },
+  { name: 'The', value: -12 },
+  { name: 'Magnetic', value: 13 },
+  { name: 'Zeros', value: 37 }
+];
+ordenado = items.sort(function(a,b){
+  return a.value-b.value
+})
+
+let strings = ['a', 'z', 'l', 'y', 'e', 'c']
+console.log(strings.sort());
+// (function (a, b) {
+//   // if (a > b) {
+//   //   return 1;
+//   // }
+//   if (a < b) {
+//     return -1;
+//   }
+//   // // a must be equal to b
+//   // return 0;
+// });
+
+console.log(ordenado)
+
+
+const funcionFlecha = () => {
+
+}
+
+function funcionNormal(){
+  
+}
