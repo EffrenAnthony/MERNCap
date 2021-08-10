@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <title>Pokedex</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./scripts.js" type="text/javascript"></script>
+</head>
+<body>
+  <div id="mySidenav" class="sidenav">
+    <!-- prevent default javascript:void(0) -->
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#">Fire</a>
+    <a href="#">Water</a>
+    <a href="#">Plant</a>
+    <a href="#">Psychic</a>
+  </div>
+  <span onclick="openNav()" class="menu-open">
+    <img src="./favicon/favicon-32x32.png" alt=""> Search by Types
+  </span>
+  <div id="main">
+    <div class="container">
+      <header class="header">
+        <h1 class="header__title">Pokedex</h1>
+        <input type="text" id="pokemonSearch" class="header__input">
+      </header>
+      <ul>
+        <li href="#">Fire</li>
+        <li href="#">Water</li>
+        <li href="#">Plant</li>
+        <li href="#">Psychic</li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
