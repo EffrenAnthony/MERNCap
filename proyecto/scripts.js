@@ -9,3 +9,9 @@ function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
   document.getElementById("main").style.marginLeft = "0";
 }
+
+PokeApi.getPokemons(5)
+.then((arregloPokemons) => {
+  let pokelist = document.getElementById("poke-list")
+  renderPokemons(arregloPokemons, pokelist)
+})
