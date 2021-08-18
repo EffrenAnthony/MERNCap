@@ -1,6 +1,7 @@
 /* The side navigation menu */
 * {
   margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 .sidenav {
@@ -16,7 +17,7 @@
   /* Stay at the top */
   left: 0;
   background-color: white;
-  /* Black*/
+  /* white*/
   overflow-x: hidden;
   /* Disable horizontal scroll */
   padding-top: 60px;
@@ -66,6 +67,22 @@
 .menu-open {
   display: flex;
   align-items: center;
+}
+
+.pokemons {
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+}
+.pokemons__list {
+  grid-column: 4/12;
+  max-height: 400px;
+  overflow-y: scroll;
+}
+.pokemons__list-item {
+  cursor: pointer;
+}
+.pokemons__item {
+  grid-column: 18/34;
 }
 
 /*# sourceMappingURL=styles.css.map */

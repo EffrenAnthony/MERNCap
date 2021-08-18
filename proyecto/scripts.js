@@ -10,8 +10,34 @@ function closeNav() {
   document.getElementById("main").style.marginLeft = "0";
 }
 
-PokeApi.getPokemons(5)
-.then((arregloPokemons) => {
+let pokemonsList = []
+// console.log(PokeApi.getPokemons(5))
+PokeApi.getPokemons(151)
+.then(
+  function (arregloPokemons) {
+    // console.log(arregloPokemons);
+    pokemonsList = arregloPokemons
+    let pokelist = document.getElementById("poke-list")
+    renderPokemons(arregloPokemons, pokelist)
+  }
+)
+
+function searchPokemons() {
+  let inputValue = document.getElementById("pokemonSearch").value
+  // console.log(inputValue)
+  // filtrar el arreglo de pokemons
+  let filteredPokemons = pokemonsList.filter(pokemon => pokemon.name.includes(inputValue) )
   let pokelist = document.getElementById("poke-list")
-  renderPokemons(arregloPokemons, pokelist)
-})
+  re_renderPokemons(filteredPokemons, pokelist)
+  // re renderizar
+}
+
+function showOnePokemon(idPoke) {
+
+  PokeApi.getPokemon(idPoke)
+  .then(pokemon =>{
+    // console.log(pokemon)
+    let pokeElement = document.getElementById("pokemon_view")
+    renderSinglePokemon(pokemon,pokeElement)
+  })
+}

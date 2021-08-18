@@ -8,6 +8,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
   <link rel="manifest" href="favicon/site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <title>Pokedex</title>
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
@@ -31,12 +34,18 @@
     <div class="container">
       <header class="header">
         <h1 class="header__title">Pokedex</h1>
-        <input type="text" id="pokemonSearch" class="header__input">
+        <input type="text" id="pokemonSearch" class="header__input" onchange="searchPokemons()">
       </header>
-      <div id='poke-list'>
-        <h3>Poke List</h3>
+      <div class="pokemons">
+        <div id='poke-list' class="pokemons__list">
+          <h3>Poke List</h3>
+        </div>
+        <div class="pokemons__item" id='pokemon_view'>
+          pokemon view
+        </div>
       </div>
     </div>
   </div>
+  <a href="./pokemon.html/1">Ir a pokemon</a>
 </body>
 </html>

@@ -32,3 +32,12 @@ const PokeApi = {
 // }, 3000)
 
 // console.log('proceso terminado');
+
+function returnPromise () {
+  return new Promise((resolve, reject) => {
+    axios.get(`${APIBaseUrl}pokemon?limit=${num}`)
+    .then((pokemons) => {
+      resolve(pokemons.data.results)
+    })
+  })
+}
