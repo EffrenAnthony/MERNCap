@@ -70,5 +70,15 @@
   }
   &__item{
     grid-column: 18/34;
+    &--name{
+      font-size: 20px;
+      transform: uppercase;
+    }
   }
+}
+
+
+h3{
+  font-size: 20px;
+    transform: uppercase;
 }

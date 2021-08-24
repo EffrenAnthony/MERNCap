@@ -4,6 +4,7 @@ const renderPokemons = (pokemons, targetElement) => {
     let idPoke = pokeSplit[pokeSplit.length - 2]
     return `
     <div class='pokemons__list-item' onclick='showOnePokemon(${idPoke})'>
+    <img style='width: 50px' src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${idPoke}.png' >
       <p>${pokemon.name}</p>
     </div>
     `
@@ -46,13 +47,23 @@ const renderSinglePokemon = (pokemon, targetElement) => {
       `
     })
     .join(' ')
+
+  const pokemoves = pokemon.moves.map((move, index) => {
+    return`
+      <h1>${move.move.name}</h1>
+    `
+  }).join(' ')
   targetElement.innerHTML = `
 
     <div>
-      <h3>${pokemon.name}</h3>
-      <img src="${pokemon.sprites.front_default}">
+      <h3  class='pokemons__name'>${pokemon.name}</h3>
+      <!--<img src="${pokemon.sprites.front_default}">-->
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/${pokemon.id}.png">
       <div>
         ${pokeAbilities}
+      </div>
+      <div>
+        ${pokemoves}
       </div>
     </div>
 

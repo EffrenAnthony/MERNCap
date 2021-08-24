@@ -2,7 +2,18 @@ const APIBaseUrl = 'https://pokeapi.co/api/v2/'
 const PokeApi = {
   getPokemons: async function(num) {
     const pokemons = await axios.get(`${APIBaseUrl}pokemon?limit=${num}`)
-    return pokemons.data.results
+    const pokeList = pokemons.data.results
+    // const newPokeList = []
+    // for(let i = 0; i < pokeList.length; i++) {
+    //   const pokemon = await axios.get(pokeList[i].url)
+    //   console.log(pokemon);
+    //   newPokeList.push({
+    //     name: pokemon.data.name,
+    //     img: pokemon.data.sprites.front_default,
+    //     url: pokeList[i].url
+    //   })
+    // }
+    return pokeList
   },
   getPokemon: async function(id) {
     const pokemon = await axios.get(`${APIBaseUrl}pokemon/${id}/`)

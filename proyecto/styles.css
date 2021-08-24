@@ -1,7 +1,7 @@
 /* The side navigation menu */
 * {
   margin: 0;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .sidenav {
@@ -22,6 +22,7 @@
   /* Disable horizontal scroll */
   padding-top: 60px;
   /* Place content 60px from the top */
+  -webkit-transition: 0.5s;
   transition: 0.5s;
   /* 0.5 second transition effect to slide in the sidenav */
 }
@@ -32,6 +33,7 @@
   font-size: 25px;
   color: #000000;
   display: block;
+  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
 
@@ -51,7 +53,8 @@
 
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
-  transition: margin-left 0.5s;
+  -webkit-transition: margin-left .5s;
+  transition: margin-left .5s;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -59,30 +62,53 @@
   .sidenav {
     padding-top: 15px;
   }
-
   .sidenav a {
     font-size: 18px;
   }
 }
+
 .menu-open {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .pokemons {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(40, 1fr);
+      grid-template-columns: repeat(40, 1fr);
 }
+
 .pokemons__list {
+  -ms-grid-column: 4;
+  -ms-grid-column-span: 8;
   grid-column: 4/12;
   max-height: 400px;
   overflow-y: scroll;
 }
+
 .pokemons__list-item {
   cursor: pointer;
 }
+
 .pokemons__item {
+  -ms-grid-column: 18;
+  -ms-grid-column-span: 16;
   grid-column: 18/34;
 }
 
+.pokemons__item--name {
+  font-size: 20px;
+  -webkit-transform: uppercase;
+          transform: uppercase;
+}
+
+h3 {
+  font-size: 20px;
+  -webkit-transform: uppercase;
+          transform: uppercase;
+}
 /*# sourceMappingURL=styles.css.map */
